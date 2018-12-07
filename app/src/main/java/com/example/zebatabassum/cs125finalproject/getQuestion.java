@@ -16,6 +16,7 @@ import java.net.URL;
 public class getQuestion extends AsyncTask<Void,Void,Void>{
     String data = "";
     String dataParsed = "";
+    String dataParsedAnswer = "";
     String singleParsed = "";
     @Override
     protected Void doInBackground(Void... voids) {
@@ -34,16 +35,20 @@ public class getQuestion extends AsyncTask<Void,Void,Void>{
             JSONObject arr = new JSONObject(data);
             //JSONArray results = (JSONArray) (arr.get("results"));
             String qq ="";
+            String aa ="";
             JSONArray jsonarray = (JSONArray) (arr.get("results"));
             for (int i = 0; i < jsonarray.length(); i++) {
                 JSONObject jsonobject = jsonarray.getJSONObject(i);
-                 qq= jsonobject.getString("question");
+                qq= jsonobject.getString("question");
+                aa = jsonobject.getString("correct_answer");
+
                 //String url = jsonobject.getString("url");
             }
             //singleParsed =  results.get(4);
             //JSONObject tst = new JSONObject(results);
             Log.d("TAG", qq);
             dataParsed = qq;
+            dataParsedAnswer = aa;
 //            for(int i = 0; i <arr.length(); i++) {
 //                JSONObject obj = (JSONObject) arr.get(i);
 //                singleParsed = "Category: " + obj.get("results").get("question");
@@ -65,5 +70,8 @@ public class getQuestion extends AsyncTask<Void,Void,Void>{
         super.onPostExecute(aVoid);
 
         CompSci.data.setText(this.dataParsed);
+        CompSci.dataAnswers.setText(this.dataParsedAnswer);
+
+
     }
 }

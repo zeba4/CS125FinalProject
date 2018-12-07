@@ -31,6 +31,24 @@
         android:hint="Put text here"
         android:id="@+id/questions"/>
 
+    <TextView
+        android:id="@+id/answers"
+        android:layout_width="222dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Put answer here"
+        android:visibility="invisible"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/questions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questions"
+        app:layout_constraintVertical_bias="0.556" />
+
     <Button
         android:id="@+id/getQuestionCS"
         android:layout_width="167dp"
@@ -44,7 +62,26 @@
         android:text="New Question"
         app:layout_constraintBottom_toBottomOf="@+id/questions"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <Button
+        android:id="@+id/answerCS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questions"
+        app:layout_constraintVertical_bias="0.776" />
 
 </android.support.constraint.ConstraintLayout>
