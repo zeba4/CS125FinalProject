@@ -32,9 +32,9 @@ public class getQuestion extends AsyncTask<Void,Void,Void>{
             }
 
             JSONObject arr = new JSONObject(data);
-            JSONArray results = (JSONArray) (arr.get("results"));
+            //JSONArray results = (JSONArray) (arr.get("results"));
             String qq ="";
-            JSONArray jsonarray = results;
+            JSONArray jsonarray = (JSONArray) (arr.get("results"));
             for (int i = 0; i < jsonarray.length(); i++) {
                 JSONObject jsonobject = jsonarray.getJSONObject(i);
                  qq= jsonobject.getString("question");
@@ -43,14 +43,11 @@ public class getQuestion extends AsyncTask<Void,Void,Void>{
             //singleParsed =  results.get(4);
             //JSONObject tst = new JSONObject(results);
             Log.d("TAG", qq);
-            dataParsed = qq;//dataParsed + singleParsed + "\n";
+            dataParsed = qq;
 //            for(int i = 0; i <arr.length(); i++) {
 //                JSONObject obj = (JSONObject) arr.get(i);
 //                singleParsed = "Category: " + obj.get("results").get("question");
-//
-//
 //                dataParsed = dataParsed + singleParsed + "\n";
-//
 //            }
 
         } catch (MalformedURLException e) {
