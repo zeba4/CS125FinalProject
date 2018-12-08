@@ -1,5 +1,7 @@
 package com.example.zebatabassum.cs125finalproject;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +45,8 @@ public class CompSci extends AppCompatActivity {
         getQuestionCS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView textView = (TextView) findViewById(R.id.answers);
+                textView.setVisibility(View.INVISIBLE);
                 getQuestion process = new getQuestion();
                 process.execute();
             }

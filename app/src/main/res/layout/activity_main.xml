@@ -4,24 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@drawable/backgroundimage"
     android:statusBarColor= "@color/colorAccent"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="534dp"
+        android:layout_height="842dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backgroundimage" />
 
     <Button
         android:id="@+id/start"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="186dp"
+        android:layout_width="202dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="104dp"
-        android:background="@android:drawable/progress_horizontal"
+        android:layout_marginBottom="128dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Start"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColorLink="@color/colorAccent"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +40,7 @@
 
     <TextView
         android:id="@+id/editText"
-        android:layout_width="162dp"
+        android:layout_width="142dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -41,12 +52,13 @@
         android:inputType="textPersonName"
         android:text="Trivia"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@color/colorAccent"
         android:textColorLink="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintVertical_bias="0.323" />
 
 </android.support.constraint.ConstraintLayout>
